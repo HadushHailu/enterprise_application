@@ -6,19 +6,26 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
-     
-	<bean id="customerService" class="customers.CustomerService">
-		<property name="customerDAO" ref="customerDAO" />
-		<property name="emailSender" ref="emailSender" />
-	</bean>
+	<context:component-scan base-package = "customers"/>
+	<!--	<context:annotation-config/>-->
 
-	<bean id="customerDAO" class="customers.CustomerDAO">
-		<property name="logger" ref="logger"/>
-	</bean>
+<!--	<bean id="customerService" class="customers.CustomerService" init-method="init" destroy-method="destroy">-->
+<!--&lt;!&ndash;		<property name="emailSender" ref="emailSender" />&ndash;&gt;-->
+<!--&lt;!&ndash;		<constructor-arg ref="customerDAO"/>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;		<property name="customerDAO" ref="customerDAO" />&ndash;&gt;&ndash;&gt;-->
 
-	<bean id="emailSender" class="customers.EmailSender">
-		<property name="logger" ref="logger"/>
-	</bean>
+<!--	</bean>-->
+
+<!--	<bean id="customerDAO0" class="customers.CustomerDAO">-->
+<!--		<property name="logger" ref="logger"/>-->
+<!--	</bean>-->
+
+<!--	<bean id="emailSender" class="customers.EmailSender">-->
+<!--		<property name="logger" ref="logger"/>-->
+<!--	</bean>-->
+<!--	<bean id="emailSender2" class="customers.EmailSender">-->
+<!--		<property name="logger" ref="logger"/>-->
+<!--	</bean>-->
 
 	<bean id="logger" class="customers.Logger"/>
 </beans>
