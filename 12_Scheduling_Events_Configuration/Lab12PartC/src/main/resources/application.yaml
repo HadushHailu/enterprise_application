@@ -1,0 +1,15 @@
+myconfig:
+  app:
+    applicationName: habeshaNet
+    version: 1.2.0
+    url: 172.46.45.233
+    serverName: habeshaNet
+    user:
+      first_name: kebede
+      last_name: gebre
+      user_name: user
+      password: password
+    coverage:
+      countries:
+        - usa
+        - america
